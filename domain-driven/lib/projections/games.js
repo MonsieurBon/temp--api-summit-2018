@@ -15,6 +15,24 @@ eventPublisher.on('events::*', event => {
       };
 
       games.push(game);
+      break;
+    }
+    case 'succeeded': {
+      const game =
+        games.find(game => game.id === event.aggregateId);
+
+      game.level = event.data.nextLevel;
+      game.question = event.data.nextQuestion;
+      break;
+    }
+    case 'completed': {
+      const game =
+        games.find(game => game.id === event.aggregateId);
+
+      game.level = undefined;
+      game.question = undefined;
+      game.isCompleted = true;
+      break;
     }
     default: {
       break;
