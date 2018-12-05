@@ -1,0 +1,15 @@
+{
+  "name": "ncg",
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "1.18.3",
+    "cors": "2.8.5",
+    "eventemitter2": "5.0.1",
+    "express": "4.16.4",
+    "flaschenpost": "1.1.3",
+    "processenv": "1.1.0",
+    "require-dir": "1.2.0",
+    "uuidv4": "2.0.0",
+    "validate-value": "3.0.0"
+  }
+}
